@@ -1,0 +1,148 @@
+//
+//  PrefixHeader.pch
+//  jjxinfadi
+//
+//  Created by CMP on 2018/7/13.
+//  Copyright © 2018年 ChiefCadet. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+//https://www.cnblogs.com/ios-wmm/p/3299695.html
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+//==============================
+//常用宏定义
+
+//size的宏定义
+#define SIZE [UIScreen mainScreen].bounds.size
+
+//在这里做字符串适配(偶尔会出现一些问题,比如null,直接强转为字符串)
+#define JJSTRING(string) [NSString stringWithFormat:@"%@",string]
+
+//self的弱引用
+#define JJWEAKSELF __weak typeof(self) weakself = self;
+//#define WEAKJJ(jjweak) __weak typeof(jjweak) o##weak = jjweak;
+
+#define CALL(phone) dispatch_async(dispatch_get_main_queue(), ^{ [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",phone]]]; });
+//==============================
+
+
+//==============================
+//适配屏幕
+#define IS_IPHONE_X [JJOther is_iPhoneX]
+#define IPHONE_SAFEAREA_STATUSBAR_HEIGHT      (IS_IPHONE_X ? 44 : 20)//状态栏高度
+#define IPHONE_SAFEAREA_NAVIGATIONBAR_HEIGHT  (IS_IPHONE_X ? 88 : 64)//导航栏高度(涵盖状态栏)
+#define IPHONE_SAFEAREA_TABBAR_HEIGHT (IS_IPHONE_X ? 83 : 49)//分栏控制器
+#define IPHONE_SAFEAREA_EXTRA_TOP_HEIGHT (IS_IPHONE_X ? 34 : 0)//顶部多出一块
+#define IPHONE_SAFEAREA_EXTRA_BOTTOM_HEIGHT (IS_IPHONE_X ? 34 : 0)//底部多出一块
+//#define IPHONE_TOPSAFEAREA_HEIGHT      (IS_IPHONE_X ? 32 : 0)//忘了指哪一块了
+//==============================
+
+//==============================
+//解决打印不全的问题
+#ifdef DEBUG
+#define JJLog(FORMAT, ...) fprintf(stderr, "%s:%zd\t%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
+#else
+#define JJLog(FORMAT, ...) nil
+#endif
+//==============================
+
+
+//以下根据项目改动
+//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+//==============================
+//图片
+
+//等待图片placeholderImage
+#define IMAGE_PLACEHOLDERIMAGE [UIImage imageNamed:@""]
+//等待图片_头像
+#define IMAGE_PLACEHOLDERHEADIMAGE [UIImage imageNamed:@"morentouxiang"]
+
+//头像图片 默认
+#define IMAGE_DEFAULTHEADIMAGE [UIImage imageNamed:@"morentouxiang"]
+
+//图片加载失败 的图片
+#define IMAGE_LOADFAIL [UIImage imageNamed:@"imagefail"]
+
+//三目运算方式/判断是否有http头,如果没有则拼接上
+#define JJIMAGEURLSTRING(urlString) [urlString hasPrefix:@"http://"] ? urlString : [NSString stringWithFormat:@"http://%@",urlString]
+//==============================
+
+//==============================
+//颜色
+//转换16进制~hexadecimal
+#define JJCOLOR_16CONVERSION(string) [JJOther colorWithHexString:string]
+
+//不是纯白的白色
+#define JJCOLOR_BAISE [UIColor colorWithRed:0.99f green:0.99f blue:0.98f alpha:1.0f]
+
+//主题颜色
+#define JJCOLOR_ZHUTI [UIColor colorWithRed:253.f / 255 green:126.f / 255 blue:126.f / 255 alpha:1.f] //253   126    126;
+
+//随机颜色获取
+//random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+//#define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define JJCOLOR_RANDOM [UIColor colorWithRed:arc4random_uniform(256)/255.f green:arc4random_uniform(256)/255.f blue:arc4random_uniform(256)/255.f alpha:1.f]
+
+//==============================
+
+
+
+//==============================
+//服务电话(客服电话)
+#define SERVICEPHONE @"99999999999999999"
+
+
+//==============================
+
+//==============================
+//引入全局类
+//全局单例
+#import "JJExtern.h"
+
+//请求地址
+#import "JJURLHeader.h"
+
+//网络请求(静态)
+#import "JJDownload.h"
+
+//提示hud
+#import "UIViewController+HUD.h"
+
+//下拉刷新
+//#import <MJRefresh.h>
+
+//统计图
+//@import Charts;
+
+//==============================
+
+
+////路径
+//#define FILEPATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+//#define SQLFILEPATH [NSString stringWithFormat:@"%@/jjsql.sqlite",FILEPATH]
+
+
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */
+
+
+
+
+
+
+
+
+
+

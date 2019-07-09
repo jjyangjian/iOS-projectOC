@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JJDengluController">
+            <connections>
+                <outlet property="textField0" destination="AXZ-Xm-1r7" id="F7I-pf-wo4"/>
+                <outlet property="textField1" destination="RZh-1A-bwt" id="Oo6-Ia-gYI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phr-Zq-Q6h">
+                    <rect key="frame" x="35" y="345" width="250" height="40"/>
+                    <color key="backgroundColor" red="0.034201505100000001" green="0.44974452850000002" blue="0.6959399288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="BUf-Gj-eqT"/>
+                        <constraint firstAttribute="height" constant="40" id="Q2a-xf-AFI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="登录"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="3aZ-KR-xiT"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXZ-Xm-1r7">
+                    <rect key="frame" x="45" y="210" width="230" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="aEF-ag-Y3d"/>
+                        <constraint firstAttribute="width" constant="230" id="sVp-Cq-TPB"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" textContentType="username"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZh-1A-bwt">
+                    <rect key="frame" x="45" y="275" width="230" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230" id="AT8-fz-wuB"/>
+                        <constraint firstAttribute="height" constant="40" id="MTs-nz-gyt"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="denglu_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="XQZ-7F-Yqs">
+                    <rect key="frame" x="90" y="60" width="140" height="140"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgz-xL-IlO">
+                    <rect key="frame" x="45" y="250" width="230" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="r6D-28-XIQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJR-8w-ojp">
+                    <rect key="frame" x="45" y="315" width="230" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="k1Y-tE-Afn"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="createc_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-k3-NLU">
+                    <rect key="frame" x="16" y="40" width="87.5" height="16.5"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AXZ-Xm-1r7" firstAttribute="top" secondItem="XQZ-7F-Yqs" secondAttribute="bottom" constant="10" id="4fe-dl-0CQ"/>
+                <constraint firstItem="QJR-8w-ojp" firstAttribute="top" secondItem="RZh-1A-bwt" secondAttribute="bottom" id="ATu-wg-9eW"/>
+                <constraint firstItem="QJR-8w-ojp" firstAttribute="trailing" secondItem="RZh-1A-bwt" secondAttribute="trailing" id="BT7-Qp-wh0"/>
+                <constraint firstItem="phr-Zq-Q6h" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="G8r-9U-kYH"/>
+                <constraint firstItem="XQZ-7F-Yqs" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="JTE-xe-XyL"/>
+                <constraint firstItem="phr-Zq-Q6h" firstAttribute="top" secondItem="RZh-1A-bwt" secondAttribute="bottom" constant="30" id="Mcr-Vs-1jw"/>
+                <constraint firstItem="RZh-1A-bwt" firstAttribute="top" secondItem="AXZ-Xm-1r7" secondAttribute="bottom" constant="25" id="PQr-uy-ob8"/>
+                <constraint firstItem="mgz-xL-IlO" firstAttribute="top" secondItem="AXZ-Xm-1r7" secondAttribute="bottom" id="Tnb-wW-bAu"/>
+                <constraint firstItem="AXZ-Xm-1r7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="acM-Ey-V6U"/>
+                <constraint firstItem="RZh-1A-bwt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cgv-JF-FNA"/>
+                <constraint firstItem="QJR-8w-ojp" firstAttribute="leading" secondItem="RZh-1A-bwt" secondAttribute="leading" id="fKp-s5-cuV"/>
+                <constraint firstItem="XQZ-7F-Yqs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mup-mB-IeZ"/>
+                <constraint firstItem="FnI-k3-NLU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="shX-E2-PhZ"/>
+                <constraint firstItem="FnI-k3-NLU" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="trv-1c-VLp"/>
+                <constraint firstItem="mgz-xL-IlO" firstAttribute="trailing" secondItem="AXZ-Xm-1r7" secondAttribute="trailing" id="vxv-HH-iwO"/>
+                <constraint firstItem="mgz-xL-IlO" firstAttribute="leading" secondItem="AXZ-Xm-1r7" secondAttribute="leading" id="x5o-Ng-3yW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="96" y="215"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="createc_logo.png" width="87.5" height="16.5"/>
+        <image name="denglu_logo.png" width="140" height="140"/>
+    </resources>
+</document>

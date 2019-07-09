@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JJBaojingjilu1CollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="86" height="63"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="86" height="63"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDx-fd-5DH">
+                        <rect key="frame" x="26.5" y="4" width="33" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="K7X-dZ-grx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbJ-yb-6pZ">
+                        <rect key="frame" x="27.5" y="20" width="31" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="kDz-ac-Jzr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eze-Bi-eK1">
+                        <rect key="frame" x="25" y="34" width="36" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="ahB-lk-e2V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xbJ-yb-6pZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="A8m-dg-zDx"/>
+                <constraint firstItem="gDx-fd-5DH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="IcS-iI-fmb"/>
+                <constraint firstItem="xbJ-yb-6pZ" firstAttribute="top" secondItem="gDx-fd-5DH" secondAttribute="bottom" id="S4J-29-TqK"/>
+                <constraint firstItem="gDx-fd-5DH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Sju-Rw-Vo8"/>
+                <constraint firstItem="eze-Bi-eK1" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fR6-xc-PEc"/>
+                <constraint firstItem="eze-Bi-eK1" firstAttribute="top" secondItem="xbJ-yb-6pZ" secondAttribute="bottom" id="noq-aV-7Hj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="86" height="63"/>
+            <connections>
+                <outlet property="label0" destination="gDx-fd-5DH" id="ndX-9J-lk4"/>
+                <outlet property="label1" destination="xbJ-yb-6pZ" id="6qA-Cx-8ln"/>
+                <outlet property="label2" destination="eze-Bi-eK1" id="mqQ-lj-FdL"/>
+            </connections>
+            <point key="canvasLocation" x="117" y="207"/>
+        </collectionViewCell>
+    </objects>
+</document>
